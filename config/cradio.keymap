@@ -12,6 +12,8 @@
     #define FUNCTION 3
     #define DIRECTION 4
 
+// Mouse movement speed
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 // -----------------
 
 &mt {
@@ -67,10 +69,10 @@
                 NUMBERS_layer {
                         label = "NUMBERS";
                         bindings = <
-                        &trans   &trans &trans &trans &trans        &kp LS(EQUAL) &kp N7 &kp N8 &kp N9 &kp LS(N8)
-                        &kp RGUI &trans &trans &trans &trans        &dot_minus    &kp N4 &kp N5 &kp N6 &kp N0
-                        &trans   &trans &trans &trans &trans        &kp EQUAL     &kp N1 &kp N2 &kp N3 &kp SLASH
-                                        &trans  &trans              &kp C_PLAY &caps_word
+                        &trans   &trans   &trans     &trans    &trans        &kp LS(EQUAL) &kp N7 &kp N8 &kp N9 &kp LS(N8)
+                        &kp LGUI &kp LALT &kp LSHIFT &kp LCTRL &trans        &dot_minus    &kp N4 &kp N5 &kp N6 &kp N0
+                        &trans   &trans   &trans     &trans    &trans        &kp EQUAL     &kp N1 &kp N2 &kp N3 &kp SLASH
+                                                     &trans    &trans        &kp C_PLAY    &caps_word
                         >;
                 };
 
@@ -92,7 +94,7 @@
                         &trans &trans &trans &trans &trans          &kp C_MUTE    &kp F7 &kp F8 &kp F9 &kp F12
                         &trans &trans &trans &trans &trans          &kp C_VOL_UP  &kp F4 &kp F5 &kp F6 &kp F11
                         &trans &trans &trans &trans &trans          &kp C_VOL_DN  &kp F1 &kp F2 &kp F3 &kp F10
-                                        &trans  &trans              &kp C_PREV &kp C_NEXT
+                                             &trans &trans          &kp C_PREV    &kp C_NEXT
                         >;
                 };
 
@@ -100,9 +102,9 @@
                 DIRECTION_layer {
                         label = "DIRECTIONS";
                         bindings = <
-                        &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp INS          &trans &mkp LCLK &mkp RCLK &mkp MCLK &trans
-                        &kp LEFT       &kp UP       &kp DOWN       &kp RIGHT       &kp C_BRI_UP     &trans &trans    &trans    &trans    &kp LGUI
-                        &kp PG_UP      &kp PG_DN    &kp HOME       &kp END         &kp C_BRI_DN     &trans &trans    &trans    &trans    &trans
+                        &mmv MOVE_LEFT &mmv MOVE_UP &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp INS          &trans &mkp LCLK &mkp RCLK  &mkp MCLK &trans
+                        &kp LEFT       &kp UP       &kp DOWN       &kp RIGHT       &kp C_BRI_UP     &trans &kp RCTRL &kp RSHIFT &kp RALT  &kp RGUI
+                        &kp PG_UP      &kp PG_DN    &kp HOME       &kp END         &kp C_BRI_DN     &trans &trans    &trans     &trans    &trans
                                                                 &kp ESC &kp DELETE                  &trans &trans
                         >;
                 };
