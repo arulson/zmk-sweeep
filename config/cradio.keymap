@@ -13,7 +13,7 @@
     #define DIRECTION 4
 
 // Mouse movement speed
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000  // 600
 // -----------------
 
 &mt {
